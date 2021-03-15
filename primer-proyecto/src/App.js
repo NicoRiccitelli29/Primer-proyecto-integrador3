@@ -1,3 +1,4 @@
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
         <li><a href="https://www.facebook.com" uk-icon="facebook"></a></li>
         <li><a href="https://twitter.com" uk-icon="twitter"></a></li>
     </ul>
-    <ul class="uk-width-1-3 uk-flex uk-flex-middle uk-flex-between uk-height-1-1 uk-margin-remove uk-padding-remove">
+    <ul class="">
         <li>Nicolás Riccitelli</li>
         <li>Tomas Bongarra</li>
         <li>Demián Lazarte</li>
