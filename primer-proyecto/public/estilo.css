@@ -1,0 +1,54 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/* FONTS */
+body{
+    background-attachment: fixed;
+    background-color: cornflowerblue;
+
+}
+header{
+    width: 1500px;
+    font-family: arial;
+    background-color:whitesmoke;
+    color: black;
+    position: fixed;
+
+}
+
+h1{
+    font-family: Impact;
+    padding-left: 20px;
+}
+
+main div.tarjeta {
+    
+    font-family: arial;
+    background-color: whitesmoke;
+    border-width: 20px;
+    border-color: violet;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    
+
+}
+
+
+footer{
+    background-color:whitesmoke;
+    height: 200px;
+    color: black;
+    padding-top: 10px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    margin-top: 0;
+    color:black;
+}
