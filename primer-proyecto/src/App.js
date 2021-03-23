@@ -56,19 +56,12 @@ function App() {
       </div>
     </main>
 
-
-
-
-
-
-    
-
     <footer >
-       <ul>
+       {/*<ul>
            <li><a href="https://www.instagram.com"> Instagram</a></li>
             <li><a href="https://www.facebook.com"> Facebook</a></li>
             <li><a href="https://twitter.com">Twitter</a></li>
-        </ul>
+       </ul> */}
         <ul>
             <li>Nicolás Riccitelli</li>
             <li>Tomas Bongarra</li>

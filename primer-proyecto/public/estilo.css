@@ -3,7 +3,7 @@
 /* FONTS */
 body{
     background-attachment: fixed;
-    background-color: cornflowerblue;
+    background-color: pink;
 
 }
 header{
@@ -34,12 +34,14 @@ main div.tarjeta {
 
 }
 
-
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/* FONTS */
 footer{
-    background-color:whitesmoke;
-    height: 200px;
-    color: black;
-    padding-top: 10px;
+    background-color: black !important;
+    height: 40px;
+    color: white;
+    padding: 0 10px;
 }
 
 footer ul{
@@ -47,8 +49,8 @@ footer ul{
 }
 
 footer ul li{
-    text-align: center;
     font-family: Helvetica, sans-serif;
     margin-top: 0;
-    color:black;
+    color: white;
+    list-style: none;
 }
