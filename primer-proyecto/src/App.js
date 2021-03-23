@@ -51,8 +51,7 @@ function App() {
           <li>Email:</li>
           <li>Fecha de nacimiento (edad):</li>
           
-        </ul>
-        
+        </ul>   
       </div>
     </main>
 
