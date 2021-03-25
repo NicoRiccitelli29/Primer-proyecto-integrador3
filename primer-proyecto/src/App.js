@@ -22,38 +22,65 @@ function App() {
     <h1>Tarjetas</h1>
 
     <main>
-      <div className='tarjeta'>
-        <h2>Foto:</h2>
-        <ul>
-          <li>Nombre:</li>
-          <li>Apellido:</li>
-          <li>Email:</li>
-          <li>Fecha de nacimiento (edad):</li>
-          
-        </ul>
-      </div>
-      <div className='tarjeta'>
-        <h2>Foto:</h2>
-        <ul>
-          <li>Nombre:</li>
-          <li>Apellido:</li>
-          <li>Email:</li>
-          <li>Fecha de nacimiento (edad):</li>
-          
-        </ul>
-      </div>
-      <div className='tarjeta'>
-        
-        <h2>Foto:</h2>
-        <ul>
-          <li>Nombre:</li>
-          <li>Apellido:</li>
-          <li>Email:</li>
-          <li>Fecha de nacimiento (edad):</li>
-          
-        </ul>   
-      </div>
+    
     </main>
+
+    <div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+            <div class="card h-100">
+            <img src="../public/img/book.jpeg" class="card-img-top" alt=""/>
+            <div class="card-body">
+                <h5 class="card-title">Tarjeta 1</h5>
+                <li class="list-group-item">Nombre:</li>
+                <li class="list-group-item">Apellido:</li>
+                <li class="list-group-item">Email:</li>
+                <li class="list-group-item">Fecha de nacimiento:</li>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">...</small>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+            <img src="../public/img/book.jpeg" class="card-img-top" alt=""/>
+            <div class="card-body">
+                <h5 class="card-title">Tarjeta 2</h5>
+                <li class="list-group-item">Nombre:</li>
+                <li class="list-group-item">Apellido:</li>
+                <li class="list-group-item">Email:</li>
+                <li class="list-group-item">Fecha de nacimiento:</li>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">...</small>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+            <img src="../public/img/book.jpeg" class="card-img-top" alt=""/>
+            <div class="card-body">
+                <h5 class="card-title">Tarjeta 3</h5>
+                <li class="list-group-item">Nombre:</li>
+                <li class="list-group-item">Apellido:</li>
+                <li class="list-group-item">Email:</li>
+                <li class="list-group-item">Fecha de nacimiento:</li>
+                
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">...</small>
+            </div>
+            </div>
+        </div>
+
+        </div>
+</div>
+
+    
 
     <footer >
        {/*<ul>

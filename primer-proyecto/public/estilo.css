@@ -3,20 +3,19 @@
 /* FONTS */
 body{
     background-attachment: fixed;
-    background-color: pink;
+    background-color: whitesmoke;
 
 }
 header{
     width: 1500px;
-    font-family: arial;
-    background-color:whitesmoke;
-    color: black;
+    background-color:#7952b3;
+    color: white;
     position: fixed;
 
 }
 
 h1{
-    font-family: Impact;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-left: 20px;
 }
 
@@ -34,23 +33,35 @@ main div.tarjeta {
 
 }
 
+
+.row {
+  margin-left: 20px !important;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 /* FONTS */
 footer{
     background-color: black !important;
-    height: 40px;
+    height: 100px;
     color: white;
     padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer ul{
     list-style: none;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 footer ul li{
     font-family: Helvetica, sans-serif;
-    margin-top: 0;
+    margin-top: 0px;
     color: white;
     list-style: none;
 }
