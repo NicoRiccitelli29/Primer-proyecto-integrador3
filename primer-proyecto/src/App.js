@@ -1,4 +1,8 @@
 import React from 'react';
+import Tarjeta from './components/Tarjetas'
+
+
+
 function App() {
   return (
 <React.Fragment>
@@ -28,54 +32,11 @@ function App() {
     <div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
-        <div class="col">
-            <div class="card h-100">
-            <img src="../public/img/book.jpeg" class="card-img-top" alt=""/>
-            <div class="card-body">
-                <h5 class="card-title">Tarjeta 1</h5>
-                <li class="list-group-item">Nombre:</li>
-                <li class="list-group-item">Apellido:</li>
-                <li class="list-group-item">Email:</li>
-                <li class="list-group-item">Fecha de nacimiento:</li>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">...</small>
-            </div>
-            </div>
-        </div>
+        <Tarjeta /> {/*Tarjeta Nro1 debemos hacer varias */}
 
-        <div class="col">
-            <div class="card h-100">
-            <img src="../public/img/book.jpeg" class="card-img-top" alt=""/>
-            <div class="card-body">
-                <h5 class="card-title">Tarjeta 2</h5>
-                <li class="list-group-item">Nombre:</li>
-                <li class="list-group-item">Apellido:</li>
-                <li class="list-group-item">Email:</li>
-                <li class="list-group-item">Fecha de nacimiento:</li>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">...</small>
-            </div>
-            </div>
-        </div>
+        <Tarjeta />
 
-        <div class="col">
-            <div class="card h-100">
-            <img src="../public/img/book.jpeg" class="card-img-top" alt=""/>
-            <div class="card-body">
-                <h5 class="card-title">Tarjeta 3</h5>
-                <li class="list-group-item">Nombre:</li>
-                <li class="list-group-item">Apellido:</li>
-                <li class="list-group-item">Email:</li>
-                <li class="list-group-item">Fecha de nacimiento:</li>
-                
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">...</small>
-            </div>
-            </div>
-        </div>
+        <Tarjeta/>
 
         </div>
 </div>
