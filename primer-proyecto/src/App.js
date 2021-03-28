@@ -1,8 +1,6 @@
 import React from 'react';
-import Tarjeta from './components/Tarjetas'
 
-
-
+import Main from './components/Main'
 function App() {
   return (
 <React.Fragment>
@@ -31,12 +29,11 @@ function App() {
 
     <div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
+    
+        <Main/>
+    
 
-        <Tarjeta /> {/*Tarjeta Nro1 debemos hacer varias */}
-
-        <Tarjeta />
-
-        <Tarjeta/>
+        
 
         </div>
 </div>
