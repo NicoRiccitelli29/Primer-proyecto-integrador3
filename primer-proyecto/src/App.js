@@ -18,26 +18,26 @@ function App() {
     </header> 
     <br></br>
     <br></br>
-    <br></br>
-    <br></br>
+
 
     <h1>Tarjetas</h1>
 
-    <main>
-    
-    </main>
+
 
     <div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        
     
         <Main/>
-    
-
         
 
-        </div>
-</div>
+        
+    </div>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
     
 
     <footer >
@@ -51,8 +51,9 @@ function App() {
             <li>Tomas Bongarra</li>
             <li>Demián Lazarte</li>
         </ul>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   </div>
 </React.Fragment>  
   );
