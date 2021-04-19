@@ -7,15 +7,19 @@ class Tarjeta extends Component{
 
        }
    }
+   borrarItem(){
+    this.props.borrar(this.props.info.id)
 
+}
        
    
     render(){
         return (
             <div >                 
-                 <div class="card h-100">         
+                 <div class="card h-100">      
                  <div class="card-body">
                      <img src={this.props.info.picture.large} alt=""/>
+                     <button type="button" className="btn btn-danger" onClick={this.borrarItem.bind(this, this.props.id)}> <b>X</b>  </button>
                      <br/>
                      <br/>
                      <li class="list-group-item">Nombre: {this.props.info.name.first}</li>

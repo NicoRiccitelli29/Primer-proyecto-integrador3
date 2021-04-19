@@ -51,3 +51,6 @@ footer ul li{
     color: white;
     list-style: none;
 }
+.btn-danger{
+    float: right;
+}
