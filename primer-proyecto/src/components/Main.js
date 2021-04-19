@@ -16,17 +16,20 @@ class Main extends Component{
      }
 
      resetDefault(){
-         fetch('https://randomuser.me/api/?results=21')
+         fetch('https://randomuser.me/api/?page=1&results=21&seed=abc')
         .then(result=>result.json())
         .then(data=>{
             this.setState({items: data.results});
             console.log(data.results);
         })
      }
+    
+        
 
     render(){
         return(
             <div class="row row-cols-1 row-cols-md-3 g-4">
+               
              {
                  this.state.items.map((persona, idx)=>{
                      return(
