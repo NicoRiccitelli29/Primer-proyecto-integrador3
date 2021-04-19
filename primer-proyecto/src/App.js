@@ -20,7 +20,7 @@ function App() {
     <br></br>
 
 
-    <h1>Tarjetas</h1>
+    <h1>Usuarios</h1>
 
 
 

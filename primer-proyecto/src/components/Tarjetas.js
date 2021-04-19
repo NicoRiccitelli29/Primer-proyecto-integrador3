@@ -1,24 +1,34 @@
+import React, {Component} from 'react';
 
-function Tarjeta(props){
-    return (
-       <div >
+class Tarjeta extends Component{
+   constructor(props){
+       super(props);
+       this.state = {
 
-       
-            <div class="card h-100">         
-            <div class="card-body">
-                <h5 class="card-title">{props.numTarjeta}</h5>
-                <li class="list-group-item">Nombre:</li>
-                <li class="list-group-item">Apellido:</li>
-                <li class="list-group-item">Email:</li>
-                <li class="list-group-item">Fecha de nacimiento:</li>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">...</small>
-            </div>
-            </div>
-        </div>
-    )
-}
+       }
+   }
+    render(){
+        return (
+            <div >                 
+                 <div class="card h-100">         
+                 <div class="card-body">
+                     <img src={this.props.info.picture.large} alt=""/>
+                     <br/>
+                     <br/>
+                     <li class="list-group-item">Nombre: {this.props.info.name.first}</li>
+                     <li class="list-group-item">Apellido: {this.props.info.name.last}</li>
+                     <li class="list-group-item">Email:  {this.props.info.email}</li>
+                     <li class="list-group-item">Fecha de nacimiento:  {this.props.info.dob.date} ({this.props.info.dob.age} años)</li>
+                 </div>
+                 <div class="card-footer">
+                     <small class="text-muted">...</small>
+                 </div>
+                 </div>
+             </div>
+         )
+     };
+    }
+    
 
 export default Tarjeta
 
