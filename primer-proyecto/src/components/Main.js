@@ -38,7 +38,14 @@ class Main extends Component{
       fetch('https://randomuser.me/api/?results=' + this.state.cantidadItemsNuevos)
        .then(result=>result.json())
        .then(data=>{
-               this.setState({items: data.results});
+               data.results.map((resultado)=>{
+                return  this.state.items.push(resultado)
+               
+            
+            })
+            this.setState({items: this.state.items})
+            
+            ;
                console.log(data.results);
               
         })
