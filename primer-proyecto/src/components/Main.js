@@ -9,6 +9,7 @@ class Main extends Component{
         this.state={
             items: [],
             itemsNuevos:0,
+            contador:0,
         }
     }
 
@@ -17,7 +18,7 @@ class Main extends Component{
      }
 
      resetDefault(){
-         fetch('https://randomuser.me/api/?page=1&results=2&seed=abc') //PREGUNTAR lo de las paginas
+         fetch('https://randomuser.me/api/?page=1&results=10&seed=abc') //PREGUNTAR lo de las paginas
         .then(result=>result.json())
         .then(data=>{
             this.setState({items: data.results});
@@ -28,7 +29,7 @@ class Main extends Component{
         let resultado = this.state.items.filter((item)=>{
              return item.id !== idTarjeta
          })
-         this.setState({items: resultado})
+         this.setState({contador: this.state.contador +1 ,items: resultado})
          console.log("Tarjeta a borrar: "+ idTarjeta);
          //Al poner uuid se borran todas. PREGUNTAR
          
@@ -40,17 +41,12 @@ class Main extends Component{
        .then(data=>{
                data.results.map((resultado)=>{
                 return  this.state.items.push(resultado)
-               
-            
             })
-            this.setState({items: this.state.items})
-            
-            ;
+            this.setState({items: this.state.items});
                console.log(data.results);
-              
         })
     }
-        
+    
 
     render(){
         return(
@@ -59,6 +55,11 @@ class Main extends Component{
             <input onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" placeholder="Agregar resultados..." aria-label="Resultados a buscar..." aria-describedby="button-addon2"></input>
             <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
             </div>
+           
+            <div className= "contador">
+                Tajetas eliminadas : {this.state.contador}
+            </div>
+            
     
             <div class="row row-cols-1 row-cols-md-3 g-4">
 
