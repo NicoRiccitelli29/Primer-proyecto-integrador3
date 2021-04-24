@@ -47,9 +47,13 @@ footer ul{
 }
 
 footer ul li{
+    bottom: 0%;
     font-family: Helvetica, sans-serif;
     color: white;
     list-style: none;
+    display: inline;
+    padding-left: 15x;
+    padding-right: 15px;
 }
 .btn-danger{
     float: right;

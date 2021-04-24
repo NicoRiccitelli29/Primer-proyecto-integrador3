@@ -65,6 +65,7 @@ class Main extends Component{
 
                
              {
+                 
                  this.state.items.map((persona, idx)=>{
                      return(
                        <Tarjeta key={idx} info={persona} borrar={this.Borrar.bind(this)}/>)
