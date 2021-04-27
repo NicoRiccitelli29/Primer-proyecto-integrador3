@@ -57,11 +57,13 @@ class Main extends Component{
         let buscar = this.state.items.filter((busqueda)=>{
            let nombre = busqueda.name.first.toUpperCase()
            let apellido = busqueda.name.last.toUpperCase()
-           return nombre.includes(filtroTarjetas) || apellido.includes(filtroTarjetas) 
+           return nombre.startsWith(filtroTarjetas) || apellido.startsWith(filtroTarjetas) 
+           
         })
         this.setState({
             items : buscar
         }
+        
         )
 
       
