@@ -18,7 +18,7 @@ class Main extends Component{
      }
 
      resetDefault(){
-         fetch('https://randomuser.me/api/?page=1&results=10&seed=abc') //PREGUNTAR lo de las paginas
+         fetch('https://randomuser.me/api/?page=1&results=10') //PREGUNTAR lo de las paginas
         .then(result=>result.json())
         .then(data=>{
             this.setState({items: data.results});
@@ -47,11 +47,24 @@ class Main extends Component{
         })
     }
     filtrarTarjetas(nombreBuscado){
-        console.log(this.state.nombreBuscado);
-        let busquedaNombre = this.state.items.filter((item)=>{
-            return item.name.first === nombreBuscado
+        let filtroTarjetas = document.querySelector(".filtro").value.toUpperCase()
+        console.log(filtroTarjetas);
+        let buscar = this.state.items.filter((search)=>{
+           let nombre = search.name.first.toUpperCase()
+           let apellido = search.name.last.toUpperCase()
+           let edad = search.dob.age.toString() 
+           return nombre.includes(filtroTarjetas) || apellido.includes(filtroTarjetas) || edad.includes(filtroTarjetas)
         })
-        this.setState({items: busquedaNombre})
+        this.setState({
+            items : buscar
+        }
+        )
+
+      //  console.log(this.state.nombreBuscado);
+        //let busquedaNombre = this.state.items.filter((item)=>{
+          //  return item.name.first === nombreBuscado
+        //})
+        //this.setState({items: busquedaNombre})
     }
 
     render(){
@@ -62,7 +75,7 @@ class Main extends Component{
             <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
             </div>
             <div class="input-group mb-3">
-            <input onChange={(event) => this.setState({nombreBuscado: event.target.value})}  class="form-control" placeholder="Buscar nombre..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
+            <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder="Buscar..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
             <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Buscar</button>
             </div>
            
