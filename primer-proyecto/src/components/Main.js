@@ -10,11 +10,13 @@ class Main extends Component{
             items: [],
             itemsNuevos:0,
             contador:0,
+           
         }
     }
 
     componentDidMount(){
         this.resetDefault();
+       
      }
 
      resetDefault(){
@@ -25,6 +27,9 @@ class Main extends Component{
             console.log(data.results);
         })
      }
+
+
+
      Borrar(idTarjeta){
         let resultado = this.state.items.filter((item)=>{
              return item.login.uuid !== idTarjeta
@@ -78,10 +83,12 @@ class Main extends Component{
             <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder="Buscar..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
             <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Buscar</button>
             </div>
+           
             <div>
                 <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
             </div>
-           
+            <br/>
+            
             <div className= "contador">
                 Tajetas eliminadas : {this.state.contador}
             </div>
