@@ -4,25 +4,33 @@ class Tarjeta extends Component{
    constructor(props){
        super(props);
        this.state = {
-
+        colorFondo: this.props.color
        }
    }
    borrarItem(){
     this.props.borrar(this.props.info.id)
 
 }
+    cambiarColor(color){
+        this.setState({
+            colorFondo: color,
+        })
+        console.log("Cambiamos el color por " + color);
+    }
        
    
     render(){
         return (
             <div >                 
                  <div class="card h-100">      
-                 <div class="card-body">
+                 <div class="card-body" style={{backgroundColor: this.state.colorFondo}}
+                 onMouseEnter={() => this.cambiarColor("grey")}
+                 onMouseLeave={() => this.cambiarColor("white")}>
                      <img src={this.props.info.picture.large} alt=""/>
                      <button type="button" className="btn btn-danger" onClick={this.borrarItem.bind(this, this.props.id)}> <b>X</b>  </button>
                      <br/>
                      <br/>
-                     <li class="list-group-item">Nombre: {this.props.info.name.first}</li>
+                     <li class="list-group-item" >Nombre: {this.props.info.name.first}</li>
                      <li class="list-group-item">Apellido: {this.props.info.name.last}</li>
                      <li class="list-group-item">Email:  {this.props.info.email}</li>
                      <li class="list-group-item">Fecha de nacimiento:  {this.props.info.dob.date} ({this.props.info.dob.age} años)</li>
