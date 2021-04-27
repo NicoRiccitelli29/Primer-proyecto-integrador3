@@ -21,7 +21,7 @@ class Main extends Component{
          fetch('https://randomuser.me/api/?page=1&results=10') //PREGUNTAR lo de las paginas
         .then(result=>result.json())
         .then(data=>{
-            this.setState({items: data.results});
+            this.setState({items: data.results, contador : 0});
             console.log(data.results);
         })
      }
@@ -77,6 +77,9 @@ class Main extends Component{
             <div class="input-group mb-3">
             <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder="Buscar..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
             <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Buscar</button>
+            </div>
+            <div>
+                <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
             </div>
            
             <div className= "contador">
