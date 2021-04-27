@@ -49,10 +49,10 @@ class Main extends Component{
     filtrarTarjetas(nombreBuscado){
         let filtroTarjetas = document.querySelector(".filtro").value.toUpperCase()
         console.log(filtroTarjetas);
-        let buscar = this.state.items.filter((search)=>{
-           let nombre = search.name.first.toUpperCase()
-           let apellido = search.name.last.toUpperCase()
-           let edad = search.dob.age.toString() 
+        let buscar = this.state.items.filter((busqueda)=>{
+           let nombre = busqueda.name.first.toUpperCase()
+           let apellido = busqueda.name.last.toUpperCase()
+           let edad = busqueda.dob.age.toString() 
            return nombre.includes(filtroTarjetas) || apellido.includes(filtroTarjetas) || edad.includes(filtroTarjetas)
         })
         this.setState({
