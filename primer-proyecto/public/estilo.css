@@ -20,7 +20,10 @@ h1{
 }
 
 
-
+a{
+    text-decoration: none;
+    color: white;
+}
 
 .row {
   margin-left: 20px !important;
@@ -44,6 +47,8 @@ footer ul{
     list-style: none;
     padding-top: 15px;
     padding-bottom: 10px;
+    list-style: none;
+    color: white;
 }
 
 footer ul li{
@@ -54,6 +59,7 @@ footer ul li{
     display: inline;
     padding-left: 15x;
     padding-right: 15px;
+    text-decoration: none;
 }
 .btn-danger{
     float: right;

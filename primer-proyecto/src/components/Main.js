@@ -27,7 +27,7 @@ class Main extends Component{
      }
      Borrar(idTarjeta){
         let resultado = this.state.items.filter((item)=>{
-             return item.id !== idTarjeta
+             return item.login.uuid !== idTarjeta
          })
          this.setState({contador: this.state.contador +1 ,items: resultado})
          console.log("Tarjeta a borrar: "+ idTarjeta);
@@ -46,7 +46,13 @@ class Main extends Component{
                console.log(data.results);
         })
     }
-    
+    filtrarTarjetas(nombreBuscado){
+        console.log(this.state.nombreBuscado);
+        let busquedaNombre = this.state.items.filter((item)=>{
+            return item.name.first === nombreBuscado
+        })
+        this.setState({items: busquedaNombre})
+    }
 
     render(){
         return(
@@ -54,6 +60,10 @@ class Main extends Component{
              <div class="input-group mb-3">
             <input onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" placeholder="Agregar resultados..." aria-label="Resultados a buscar..." aria-describedby="button-addon2"></input>
             <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+            <div class="input-group mb-3">
+            <input onChange={(event) => this.setState({nombreBuscado: event.target.value})}  class="form-control" placeholder="Buscar nombre..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
+            <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Buscar</button>
             </div>
            
             <div className= "contador">

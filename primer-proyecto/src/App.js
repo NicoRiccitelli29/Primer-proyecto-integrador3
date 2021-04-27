@@ -47,9 +47,9 @@ function App() {
             <li><a href="https://twitter.com">Twitter</a></li>
        </ul> */}
         <ul>
-            <li>Nicolás Riccitelli</li>
-            <li>Tomas Bongarra</li>
-            <li>Demián Lazarte</li>
+            <li> <a href="https://www.instagram.com/nico.riccitelli/?hl=es-la"> Nicolás Riccitelli </a></li>
+            <li> <a href ="https://www.instagram.com/toto_bongarra/?hl=es-la">Tomas Bongarra </a></li>
+            <li><a href = "https://www.instagram.com/demianlazarte/?hl=es-la"> Demián Lazarte </a></li>
         </ul>
   
     </footer>

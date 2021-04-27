@@ -8,7 +8,7 @@ class Tarjeta extends Component{
        }
    }
    borrarItem(){
-    this.props.borrar(this.props.info.id)
+    this.props.borrar(this.props.info.login.uuid)
 
 }
     cambiarColor(color){
@@ -24,10 +24,10 @@ class Tarjeta extends Component{
             <div >                 
                  <div class="card h-100">      
                  <div class="card-body" style={{backgroundColor: this.state.colorFondo}}
-                 onMouseEnter={() => this.cambiarColor("grey")}
+                 onMouseEnter={() => this.cambiarColor("#D3D3D3")}
                  onMouseLeave={() => this.cambiarColor("white")}>
                      <img src={this.props.info.picture.large} alt=""/>
-                     <button type="button" className="btn btn-danger" onClick={this.borrarItem.bind(this, this.props.id)}> <b>X</b>  </button>
+                     <button type="button" className="btn btn-danger" onClick={this.borrarItem.bind(this, this.props.info.login.uuid)}> <b>X</b>  </button>
                      <br/>
                      <br/>
                      <li class="list-group-item" >Nombre: {this.props.info.name.first}</li>
