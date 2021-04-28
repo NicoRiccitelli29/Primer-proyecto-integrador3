@@ -98,13 +98,16 @@ class Main extends Component{
             <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
             </div>
             <div class="input-group mb-3">
-            <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder="Nombre o apellido" aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
+                <div>Filtrar por Nombre o Apellido:</div>
+            <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder=" Insertar nombre o apellido..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
             <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Filtrar</button>
             </div>
             <div class="input-group mb-3">
-            <input onChange={this.filtrarPorEdad.bind(this)}  className="filtro2" placeholder="Filtrar por edad" aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
+                <div>Insertar edad para filtrar:</div> 
+            <input onChange={this.filtrarPorEdad.bind(this)}  className="filtro2" placeholder="Insertar edad..." aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
             <button  onClick={this.filtrarPorEdad.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon4">Filtrar</button>
             </div>
+
             <div>
                 <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
             </div>
