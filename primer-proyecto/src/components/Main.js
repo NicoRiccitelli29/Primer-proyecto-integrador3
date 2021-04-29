@@ -1,6 +1,6 @@
 import Tarjeta from './Tarjetas';
 import React, {Component} from "react";
-
+//Importamos tarjeta y react con el componente
 
 
 class Main extends Component{
@@ -14,13 +14,13 @@ class Main extends Component{
         }
     }
 
-    componentDidMount(){
+    componentDidMount(){ //Se ejecuta cada vez que se produce un cambio de estado
         this.resetDefault();
        
      }
 
      resetDefault(){
-         fetch('https://randomuser.me/api/?page=1&results=10') //PREGUNTAR lo de las paginas
+         fetch('https://randomuser.me/api/?page=1&results=20') 
         .then(result=>result.json())
         .then(data=>{
             this.setState({items: data.results, contador : 0});
@@ -36,7 +36,7 @@ class Main extends Component{
          })
          this.setState({contador: this.state.contador +1 ,items: resultado})
          console.log("Tarjeta a borrar: "+ idTarjeta);
-         //Al poner uuid se borran todas. PREGUNTAR
+         
          
  }
    agregarTarjetas(){
@@ -44,7 +44,7 @@ class Main extends Component{
       fetch('https://randomuser.me/api/?results=' + this.state.cantidadItemsNuevos)
        .then(result=>result.json())
        .then(data=>{
-               data.results.map((resultado)=>{
+               data.results.map((resultado)=>{ //.map() recorre el array y devuelve un array nuevo modificado
                 return  this.state.items.push(resultado)
             })
             this.setState({items: this.state.items});
