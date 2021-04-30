@@ -194,7 +194,7 @@ class Main extends Component{
                 </div>
             <div>
                 <div class="row justify-content-center">
-                    <div class="col-md-auto">
+                    <div class="col-md-auto" id="rowButton">
                     <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
                     <div className= "contador">Tajetas eliminadas : {this.state.contador}</div>
                     </div>

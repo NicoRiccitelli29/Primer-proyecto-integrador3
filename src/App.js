@@ -19,7 +19,7 @@ function App() {
    
 
     <div id="titulo">
-    <h1>GENERADOR DE USUARIOS</h1>
+    <h1>Generador de usuarios</h1>
     </div>
 
 

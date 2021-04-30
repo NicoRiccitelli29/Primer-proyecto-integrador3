@@ -26,7 +26,7 @@ class Tarjeta extends Component{
                  <div class="card-body" style={{backgroundColor: this.state.colorFondo}}
                  onMouseEnter={() => this.cambiarColor("#D3D3D3")}
                  onMouseLeave={() => this.cambiarColor("white")}>
-                     <img src={this.props.info.picture.large} alt=""/>
+                     <img class="fotoPerfil" width="190" height="190" src={this.props.info.picture.large} alt=""/>
                      <button type="button" className="btn btn-danger" onClick={this.borrarItem.bind(this, this.props.info.login.uuid)}> <b>X</b>  </button>
                      <br/>
                      <br/>
@@ -37,7 +37,7 @@ class Tarjeta extends Component{
                      <br></br>
                      
                     
-                        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Ver detalle </button>
+                        <button type="button" class="btn btn-success dropdown-toggle" id="botonTarjeta" data-bs-toggle="dropdown" aria-expanded="false">Ver detalle </button>
                              <ul class="dropdown-menu">
                                 <li class="dropdown-item" > <b>Calle y numero: </b> {this.props.info.location.street.name}, {this.props.info.location.street.number}</li>
                                 <li class="dropdown-item" > <b>Ciudad / Estado: </b> {this.props.info.location.city} / {this.props.info.location.state} </li>
