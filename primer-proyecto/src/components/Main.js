@@ -171,12 +171,17 @@ class Main extends Component{
       this.setState({items: ordenarTarjetas})
 
     }
-
-    //  console.log(this.state.nombreBuscado);
-        //let busquedaNombre = this.state.items.filter((item)=>{
-          //  return item.name.first === nombreBuscado
+  //  moverTarjeta(lugarTarjeta){
+    //    let posicion = this.state.items.findIndex((lugarTarjeta)=>{
+      //      return  lugarTarjeta.login.uuid !== lugarTarjeta
+       // })
+        //console.log(lugarTarjeta);
+        
+       // this.setState({
+         //   lugarTarjeta: posicion
         //})
-        //this.setState({items: busquedaNombre})
+        
+   // }
 
     render(){
         return(
@@ -248,10 +253,10 @@ class Main extends Component{
                  
                  this.state.items.map((persona, idx)=>{
                      return(
-                       <Tarjeta key={idx} info={persona} borrar={this.Borrar.bind(this)}/>)
+                       <Tarjeta key={idx} info={persona} borrar={this.Borrar.bind(this)}  color={"white"} /* mover={this.moverTarjeta.bind(this)}   */      />)
                      })
              }
-                 
+        
      
              </div> 
              </div>
