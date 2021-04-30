@@ -1,6 +1,7 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 /* FONTS */
 body{
@@ -16,8 +17,17 @@ header{
 
 }
 
+h2{
+    font-family: 'Fugaz One';
+    font-size: 60px !important;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 40px;
     text-align: center;
     padding-left: 20px;
     padding-top: 10px;

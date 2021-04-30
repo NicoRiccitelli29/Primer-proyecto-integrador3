@@ -10,7 +10,7 @@ function App() {
         <div class="">
             <nav class="" uk-navbar>
                 <div class="uk-navbar-left" id="nav">
-                    <h1>DNT App</h1>
+                    <h2>DNT APP</h2>
                 </div>
               </nav>  
         </div>
