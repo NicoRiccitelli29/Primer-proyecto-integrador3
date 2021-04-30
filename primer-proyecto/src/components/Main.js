@@ -1,9 +1,9 @@
 import Tarjeta from './Tarjetas';
 import React, {Component} from "react";
-//Importamos tarjeta y react con el componente
+//Importamos tarjeta y react trayendo el objeto componente
 
 
-class Main extends Component{
+class Main extends Component{ // Class definimos componente con nombre y lo extendemos
     constructor(){
         super();
         this.state={
@@ -15,7 +15,7 @@ class Main extends Component{
         }
     }
 
-    componentDidMount(){ //Se ejecuta cada vez que se produce un cambio de estado
+    componentDidMount(){ 
         this.resetDefault();
        
      }
@@ -186,20 +186,20 @@ class Main extends Component{
     render(){
         return(
             <div>
-                <div class="row justify-content-center" id="inputRow">
-                    <div class="col-md-auto">
-                        <input type="number" min="1" onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" id="inputUsuario" placeholder="Ingrese un número"></input>
+                <div className="row justify-content-center" id="inputRow">
+                    <div className="col-md-auto">
+                        <input type="number" min="1" onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  className="form-control" id="inputUsuario" placeholder="Ingrese un número"></input>
                     </div>
                 </div>    
 
-                <div class="row justify-content-center">
-                    <div class="col-md-auto">
-                        <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-warning" type="button" id="button-addon2">Añadir usuarios</button>
+                <div className="row justify-content-center">
+                    <div className="col-md-auto">
+                        <button  onClick={this.agregarTarjetas.bind(this)} className="btn btn-warning" type="button" id="button-addon2">Añadir usuarios</button>
                     </div>
                 </div>
             <div>
-                <div class="row justify-content-center">
-                    <div class="col-md-auto">
+                <div className="row justify-content-center">
+                    <div className="col-md-auto">
                     <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
                     <div className= "contador">Tajetas eliminadas : {this.state.contador}</div>
                     </div>
@@ -211,10 +211,10 @@ class Main extends Component{
             <br/>
             
             
-            <div class="row">
-            <div class="col align-self-center">
+            <div className="row">
+            <div className="col align-self-center">
                 <div>Ordenar tarjetas</div>
-                <select class="ordenar" onChange = {this.ordenarTarjetas.bind(this)} >
+                <select className="ordenar" onChange = {this.ordenarTarjetas.bind(this)} >
                     <option disabled selected>Ordenar por</option>
                     <option value="AscNombre" onClick={(event)=> this.setState({ value: event.target.value})}>Ascendente por nombre</option>
                     <option value="DesNombre" onClick={(event)=> this.setState({ value: event.target.value})}>Descendente por nombre</option>
@@ -224,16 +224,16 @@ class Main extends Component{
                     <option value="DesEdad" onClick={(event)=> this.setState({ value: event.target.value})}>Descendente por edad</option>
                 </select>
             </div>
-                <div class="input-group input-group-sm mb-3">
+                <div className="input-group input-group-sm mb-3">
                     
-                    <input onChange={this.filtrarTarjetas.bind(this)} class="form-control" id="filtro" placeholder="Filtrar por nombre" aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
-                    <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-info" type="button" id="button-addon3">Filtrar</button>
+                    <input onChange={this.filtrarTarjetas.bind(this)} className="form-control" id="filtro" placeholder="Filtrar por nombre" aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
+                    <button  onClick={this.filtrarTarjetas.bind(this)} className="btn btn-info" type="button" id="button-addon3">Filtrar</button>
                 </div>
 
-                <div class="input-group input-group-sm mb-3">
+                <div className="input-group input-group-sm mb-3">
                     
-                    <input onChange={this.filtrarPorEdad.bind(this)} class="form-control" id="filtro2" placeholder="Filtrar por edad" aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
-                    <button  onClick={this.filtrarPorEdad.bind(this)} class="btn btn-danger" type="button" id="button-addon4">Filtrar</button>
+                    <input onChange={this.filtrarPorEdad.bind(this)} className="form-control" id="filtro2" placeholder="Filtrar por edad" aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
+                    <button  onClick={this.filtrarPorEdad.bind(this)} className="btn btn-danger" type="button" id="button-addon4">Filtrar</button>
                 </div>
 
 
@@ -245,7 +245,7 @@ class Main extends Component{
 
 
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
 
             
                
