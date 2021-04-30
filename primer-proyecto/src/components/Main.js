@@ -1,9 +1,9 @@
 import Tarjeta from './Tarjetas';
 import React, {Component} from "react";
-//Importamos tarjeta y react trayendo el objeto  componente
+//Importamos tarjeta y react trayendo el objeto componente
 
 
-class Main extends Component{
+class Main extends Component{ // Class definimos componente con nombre y lo extendemos
     constructor(){
         super();
         this.state={
@@ -15,7 +15,7 @@ class Main extends Component{
         }
     }
 
-    componentDidMount(){ //Se ejecuta cada vez que se produce un cambio de estado
+    componentDidMount(){ 
         this.resetDefault();
        
      }
