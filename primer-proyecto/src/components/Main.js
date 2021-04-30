@@ -10,6 +10,7 @@ class Main extends Component{
             items: [],
             itemsNuevos:0,
             contador:0,
+            value: ""
            
         }
     }
@@ -52,7 +53,7 @@ class Main extends Component{
         })
     }
     filtrarTarjetas(nombreBuscado){
-        let filtroTarjetas = document.querySelector(".filtro").value.toUpperCase()
+        let filtroTarjetas = document.querySelector("#filtro").value.toUpperCase()
         console.log(filtroTarjetas);
         let buscar = this.state.items.filter((busqueda)=>{
            let nombre = busqueda.name.first.toUpperCase()
@@ -70,7 +71,7 @@ class Main extends Component{
     }
 
     filtrarPorEdad(edadBuscada){
-        let filtroTarjetas = document.querySelector(".filtro2").value.toUpperCase()
+        let filtroTarjetas = document.querySelector("#filtro2").value.toUpperCase()
         console.log(filtroTarjetas);
         let buscar = this.state.items.filter((busqueda)=>{
            let edad = busqueda.dob.age.toString() 
@@ -84,51 +85,178 @@ class Main extends Component{
       
     }
 
-    //  console.log(this.state.nombreBuscado);
-        //let busquedaNombre = this.state.items.filter((item)=>{
-          //  return item.name.first === nombreBuscado
+    ordenarTarjetas(event){
+        let inputValue = event.target.value
+        console.log(inputValue)
+        
+        let ordenarTarjetas
+        if (inputValue === "AscNombre" ){
+            ordenarTarjetas = this.state.items.sort((a,b)=>{
+                if(a.name.first > b.name.first) {
+                    return 1;
+                } 
+                else if(a.name.first < b.name.first){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            })  
+        }
+        else if (inputValue === "DesNombre" ){
+                ordenarTarjetas = this.state.items.sort((a,b)=>{
+                    if(a.name.first < b.name.first) {
+                        return 1;
+                    } 
+                    else if(a.name.first > b.name.first){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+        }
+        else if (inputValue === "AscApellido" ){
+                ordenarTarjetas = this.state.items.sort((a,b)=>{
+                    if(a.name.last > b.name.last) {
+                        return 1;
+                    } 
+                    else if(a.name.last < b.name.last){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+        }
+        else if (inputValue === "DesApellido" ){
+            ordenarTarjetas = this.state.items.sort((a,b)=>{
+                if(a.name.last < b.name.last) {
+                    return 1;
+                } 
+                else if(a.name.last > b.name.last){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            })
+        }
+        else if (inputValue === "AscEdad" ){
+            ordenarTarjetas = this.state.items.sort((a,b)=>{
+                if(a.dob.age > b.dob.age) {
+                    return 1;
+                } 
+                else if(a.dob.age < b.dob.age){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            })
+      }
+      else if (inputValue === "DesEdad" ){
+        ordenarTarjetas = this.state.items.sort((a,b)=>{
+            if(a.dob.age < b.dob.age) {
+                return 1;
+            } 
+            else if(a.dob.age > b.dob.age){
+                return -1;
+            }
+            else{
+                return 0;
+            }
+        })
+  }
+      this.setState({items: ordenarTarjetas})
+
+    }
+  //  moverTarjeta(lugarTarjeta){
+    //    let posicion = this.state.items.findIndex((lugarTarjeta)=>{
+      //      return  lugarTarjeta.login.uuid !== lugarTarjeta
+       // })
+        //console.log(lugarTarjeta);
+        
+       // this.setState({
+         //   lugarTarjeta: posicion
         //})
-        //this.setState({items: busquedaNombre})
+        
+   // }
 
     render(){
         return(
             <div>
-             <div class="input-group mb-3">
-            <input onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" placeholder="Agregar resultados..." aria-label="Resultados a buscar..." aria-describedby="button-addon2"></input>
-            <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-            </div>
-            <div class="input-group mb-3">
-                <div>Filtrar por Nombre o Apellido:</div>
-            <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder=" Insertar nombre o apellido..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
-            <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Filtrar</button>
-            </div>
-            <div class="input-group mb-3">
-                <div>Insertar edad para filtrar:</div> 
-            <input onChange={this.filtrarPorEdad.bind(this)}  className="filtro2" placeholder="Insertar edad..." aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
-            <button  onClick={this.filtrarPorEdad.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon4">Filtrar</button>
-            </div>
+                <div class="row justify-content-center" id="inputRow">
+                    <div class="col-md-auto">
+                        <input type="number" min="1" onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" id="inputUsuario" placeholder="Ingrese un número"></input>
+                    </div>
+                </div>    
 
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-warning" type="button" id="button-addon2">Añadir usuarios</button>
+                    </div>
+                </div>
             <div>
-                <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                    <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
+                    <div className= "contador">Tajetas eliminadas : {this.state.contador}</div>
+                    </div>
+                </div>
             </div>
+               
+
+
             <br/>
             
-            <div className= "contador">
-                Tajetas eliminadas : {this.state.contador}
-            </div>
             
-    
+            <div class="row">
+            <div class="col align-self-center">
+                <div>Ordenar tarjetas</div>
+                <select class="ordenar" onChange = {this.ordenarTarjetas.bind(this)} >
+                    <option disabled selected>Ordenar por</option>
+                    <option value="AscNombre" onClick={(event)=> this.setState({ value: event.target.value})}>Ascendente por nombre</option>
+                    <option value="DesNombre" onClick={(event)=> this.setState({ value: event.target.value})}>Descendente por nombre</option>
+                    <option value="AscApellido" onClick={(event)=> this.setState({ value: event.target.value})}>Ascendente por apellido</option>
+                    <option value="DesApellido" onClick={(event)=> this.setState({ value: event.target.value})}>Descendente por apellido</option>
+                    <option value="AscEdad" onClick={(event)=> this.setState({ value: event.target.value})}>Ascendente por edad</option>
+                    <option value="DesEdad" onClick={(event)=> this.setState({ value: event.target.value})}>Descendente por edad</option>
+                </select>
+            </div>
+                <div class="input-group input-group-sm mb-3">
+                    
+                    <input onChange={this.filtrarTarjetas.bind(this)} class="form-control" id="filtro" placeholder="Filtrar por nombre" aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
+                    <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-info" type="button" id="button-addon3">Filtrar</button>
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    
+                    <input onChange={this.filtrarPorEdad.bind(this)} class="form-control" id="filtro2" placeholder="Filtrar por edad" aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
+                    <button  onClick={this.filtrarPorEdad.bind(this)} class="btn btn-danger" type="button" id="button-addon4">Filtrar</button>
+                </div>
+
+
+             
+            </div>
+
+
+
+
+
+
             <div class="row row-cols-1 row-cols-md-3 g-4">
 
+            
                
              {
                  
                  this.state.items.map((persona, idx)=>{
                      return(
-                       <Tarjeta key={idx} info={persona} borrar={this.Borrar.bind(this)}/>)
+                       <Tarjeta key={idx} info={persona} borrar={this.Borrar.bind(this)}  color={"white"} /* mover={this.moverTarjeta.bind(this)}   */      />)
                      })
              }
-                 
+        
      
              </div> 
              </div>

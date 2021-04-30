@@ -9,18 +9,18 @@ function App() {
       <section class=" uk-container uk-container-large">
         <div class="">
             <nav class="" uk-navbar>
-                <div class="uk-navbar-left">
+                <div class="uk-navbar-left" id="nav">
                     <h1>DNT App</h1>
                 </div>
               </nav>  
         </div>
       </section> 
     </header> 
-    <br></br>
-    <br></br>
+   
 
-
-    <h1>Usuarios</h1>
+    <div id="titulo">
+    <h1>GENERADOR DE USUARIOS</h1>
+    </div>
 
 
 
