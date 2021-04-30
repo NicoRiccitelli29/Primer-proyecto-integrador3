@@ -10,10 +10,7 @@ class Main extends Component{
             items: [],
             itemsNuevos:0,
             contador:0,
-<<<<<<< HEAD
             value: ""
-=======
->>>>>>> 821a41380590a744afb76d02fae2268ab2450718
            
         }
     }
@@ -56,11 +53,7 @@ class Main extends Component{
         })
     }
     filtrarTarjetas(nombreBuscado){
-<<<<<<< HEAD
         let filtroTarjetas = document.querySelector("#filtro").value.toUpperCase()
-=======
-        let filtroTarjetas = document.querySelector(".filtro").value.toUpperCase()
->>>>>>> 821a41380590a744afb76d02fae2268ab2450718
         console.log(filtroTarjetas);
         let buscar = this.state.items.filter((busqueda)=>{
            let nombre = busqueda.name.first.toUpperCase()
@@ -78,11 +71,7 @@ class Main extends Component{
     }
 
     filtrarPorEdad(edadBuscada){
-<<<<<<< HEAD
         let filtroTarjetas = document.querySelector("#filtro2").value.toUpperCase()
-=======
-        let filtroTarjetas = document.querySelector(".filtro2").value.toUpperCase()
->>>>>>> 821a41380590a744afb76d02fae2268ab2450718
         console.log(filtroTarjetas);
         let buscar = this.state.items.filter((busqueda)=>{
            let edad = busqueda.dob.age.toString() 
@@ -96,7 +85,6 @@ class Main extends Component{
       
     }
 
-<<<<<<< HEAD
     ordenarTarjetas(event){
         let inputValue = event.target.value
         console.log(inputValue)
@@ -184,8 +172,6 @@ class Main extends Component{
 
     }
 
-=======
->>>>>>> 821a41380590a744afb76d02fae2268ab2450718
     //  console.log(this.state.nombreBuscado);
         //let busquedaNombre = this.state.items.filter((item)=>{
           //  return item.name.first === nombreBuscado
@@ -195,10 +181,9 @@ class Main extends Component{
     render(){
         return(
             <div>
-<<<<<<< HEAD
                 <div class="row justify-content-center" id="inputRow">
                     <div class="col-md-auto">
-                        <input type="number" onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" id="inputUsuario" placeholder="Ingrese un número"></input>
+                        <input type="number" min="1" onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" id="inputUsuario" placeholder="Ingrese un número"></input>
                     </div>
                 </div>    
 
@@ -258,35 +243,6 @@ class Main extends Component{
             <div class="row row-cols-1 row-cols-md-3 g-4">
 
             
-=======
-             <div class="input-group mb-3">
-            <input onChange={(event) => this.setState({cantidadItemsNuevos: event.target.value})}  class="form-control" placeholder="Agregar resultados..." aria-label="Resultados a buscar..." aria-describedby="button-addon2"></input>
-            <button  onClick={this.agregarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-            </div>
-            <div class="input-group mb-3">
-                <div>Filtrar por Nombre o Apellido:</div>
-            <input onChange={this.filtrarTarjetas.bind(this)}  className="filtro" placeholder=" Insertar nombre o apellido..." aria-label="Nombre a buscar..." aria-describedby="button-addon3"></input>
-            <button  onClick={this.filtrarTarjetas.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon3">Filtrar</button>
-            </div>
-            <div class="input-group mb-3">
-                <div>Insertar edad para filtrar:</div> 
-            <input onChange={this.filtrarPorEdad.bind(this)}  className="filtro2" placeholder="Insertar edad..." aria-label="Nombre a buscar..." aria-describedby="button-addon4"></input>
-            <button  onClick={this.filtrarPorEdad.bind(this)} class="btn btn-outline-secondary" type="button" id="button-addon4">Filtrar</button>
-            </div>
-
-            <div>
-                <button className="botonReset" onClick={this.resetDefault.bind(this)}> <b>Reset</b></button>
-            </div>
-            <br/>
-            
-            <div className= "contador">
-                Tajetas eliminadas : {this.state.contador}
-            </div>
-            
-    
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-
->>>>>>> 821a41380590a744afb76d02fae2268ab2450718
                
              {
                  
