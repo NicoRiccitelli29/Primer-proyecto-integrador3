@@ -19,7 +19,7 @@ header{
 
 h2{
     font-family: 'Fugaz One';
-    font-size: 60px !important;
+    font-size: 50px !important;
     text-align: center;
     padding-left: 20px;
     padding-top: 20px;
@@ -27,7 +27,7 @@ h2{
 
 h1{
     font-family: 'Franklin Gothic Medium';
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     padding-left: 20px;
     padding-top: 10px;
@@ -154,11 +154,13 @@ footer ul li{
     color: #7952b3;
 }
  #rowButton {
+     padding-top:10px;
      padding-bottom: 40px;
-     margin-bottom: 40px;
+     margin-bottom: 30px;
  }
 
  .fotoPerfil {
      border-radius: 15px;
+     
  }
  

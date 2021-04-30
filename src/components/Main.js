@@ -29,8 +29,6 @@ class Main extends Component{
         })
      }
 
-
-
      Borrar(idTarjeta){
         let resultado = this.state.items.filter((item)=>{
              return item.login.uuid !== idTarjeta
